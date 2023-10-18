@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Page Downloader</title>
+</head>
+<body>
+    <h1>Web Page Downloader</h1>
+    <form method="post" action="/">
+        <label for="url">Enter URL:</label>
+        <input type="text" name="url" id="url" required>
+        <button type="submit">Download</button>
+    </form>
+    {{ page_content|safe }} <!-- Display the downloaded web page content -->
+</body>
+</html>
