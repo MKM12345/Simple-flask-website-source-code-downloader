@@ -17,24 +17,24 @@ jobs:
         run: |
           git config --global user.name "MKM12345"
           git config --global user.email "arekhon.shadow@gmail.com"
-        working-directory: ./Simple-flask-website-source-code-downloader
+        working-directory: /home/runner/work/Simple-flask-website-source-code-downloader
 
       - name: Build and Deploy HTML
         run: |
           # Copy the HTML file from the 'templates' directory to the 'docs' directory.
-          cp ./Simple-flask-website-source-code-downloader/templates/index.html ./Simple-flask-website-source-code-downloader/docs/
-        working-directory: ./Simple-flask-website-source-code-downloader
+          cp /home/runner/work/Simple-flask-website-source-code-downloader/templates/index.html /home/runner/work/Simple-flask-website-source-code-downloader/docs/
+        working-directory: /home/runner/work/Simple-flask-website-source-code-downloader
 
       - name: Commit HTML Changes
         run: |
           git add .
           git commit -m "Deploy HTML files"
-        working-directory: ./Simple-flask-website-source-code-downloader
+        working-directory: /home/runner/work/Simple-flask-website-source-code-downloader
 
       - name: Push Changes
         run: |
           git push origin main
-        working-directory: ./Simple-flask-website-source-code-downloader
+        working-directory: /home/runner/work/Simple-flask-website-source-code-downloader
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v2
@@ -49,7 +49,7 @@ jobs:
 
       - name: Run Flask App
         run: |
-          export FLASK_APP=app.py  # Replace with the name of your Flask app file
+          export FLASK_APP=your_app.py  # Replace with the name of your Flask app file
           export FLASK_ENV=production
           flask run --host=0.0.0.0 --port=8080
-        working-directory: ./Simple-flask-website-source-code-downloader
+        working-directory: /home/runner/work/Simple-flask-website-source-code-downloader
