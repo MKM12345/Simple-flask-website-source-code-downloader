@@ -49,7 +49,7 @@ jobs:
 
       - name: Run Flask App
         run: |
-          export FLASK_APP=your_app.py  # Replace with the name of your Flask app file
+          export FLASK_APP=app.py  # Replace with the name of your Flask app file
           export FLASK_ENV=production
           flask run --host=0.0.0.0 --port=8080
         working-directory: ./Simple-flask-website-source-code-downloader
