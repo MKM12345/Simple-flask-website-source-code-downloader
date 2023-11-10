@@ -12,7 +12,6 @@ To run this project, you need to have the following installed:
 - Python 3
 - Flask (you can install it using `pip install flask`)
 - Requests (you can install it using `pip install requests`)
-- BytesIo (you can install it using `pip install io`)
 
 ### Installation
 
