@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    page_content = None
 
     if request.method == 'POST':
         url = request.form['url']
